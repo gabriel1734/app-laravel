@@ -3,7 +3,7 @@
 namespace App\DTO;
 
 use App\Http\Requests\StoreUpdateSupport;
-use Illuminate\Contracts\Cache\Store;
+
 
 class CreateSupportDTO {
     public function __construct(
@@ -13,7 +13,7 @@ class CreateSupportDTO {
     )
     {}
 
-    public function makeFromRequest(StoreUpdateSupport $request) : self{
+    public static function makeFromRequest(StoreUpdateSupport $request) : self{
         return new self(
             $request->subject,
             $request->status,

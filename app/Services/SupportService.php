@@ -28,10 +28,8 @@ class SupportService{
       return $this->repository->new($dto);
    }
 
-   public function update(
-      UpdateSupportDTO $dto
-   ): stdClass | null {
-      return $this->repository->new($dto);
+   public function update(UpdateSupportDTO $dto): stdClass | null {
+      return $this->repository->update($dto);
    }
 
    public function delete(int $id) : bool | null {

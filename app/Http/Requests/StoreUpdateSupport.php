@@ -27,7 +27,8 @@ class StoreUpdateSupport extends FormRequest
                 'required',
                 'min:3',
                 'max:1000',
-            ]
+            ],
+
         ];
 
         if($this->method() == 'PUT'){
